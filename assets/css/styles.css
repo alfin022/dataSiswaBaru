@@ -15,7 +15,7 @@ body{
     font-family: 'poppins',sans-serif;
     background-color: var(--bg);
     color: #0e0e0e;
-    min-height: 2000px;
+    min-height: auto;
 }
 
 .navbar{
@@ -23,14 +23,16 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 1rem 7%;
-    background-color: var(--bg);
+    background-color: rgba(252, 251, 250, 0.75);
     border-bottom: 2px solid var(--primary);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+
 }
+
 .navbar .navbar-logo{
     font-size: 2rem;
     font-weight: 700;
@@ -44,9 +46,8 @@ body{
     font-weight: 500;
     color: var(--primary);
     display: inline-block;
-    font-size: 1.3rem;
-    margin: 0 1rem;
-    
+    font-size: 1rem;
+    margin: 0 1.3rem;    
 }
 .navbar .navbar-nav a:hover{
     color: var(--font);
@@ -55,12 +56,12 @@ body{
     content: '';
     display: block;
     padding-bottom:  0.3rem;
-    border-bottom: 0.1rem solid var(--primary);
+    border-bottom: 0.2rem solid var(--primary);
     transform: scaleX(0);
-    transition: 0.2s linear;
+    transition: 0.3s linear;
 }
 .navbar .navbar-nav a:hover::after{
-    transform: scaleX(0.7);
+    transform: scaleX(1);
 }
 
 .navbar.navbar-extra a{
@@ -74,33 +75,70 @@ body{
 
 .hero
 {
-    min-height: 60vh;
-    display: flex;
     align-items: center;
     position: relative;
     margin: auto;
-    width: 85%;
+    width: 75%;
+    padding-top: 100px;
 }
 .hero::after{
     content:  '';
     display: block;
 }
-
-.hero .selamat-datang{
+.selamat-datang{
     text-align: center;
+    align-self: center;
+    width:100%;
+    margin-bottom: 3rem;
+}
+.selamat-datang h1{
+    align-items: center;
+    border-bottom: 0.2rem solid var(--primary);
+    margin-bottom: 1rem;
+}
+section div{
+    padding: 7vh 5vh;
+    margin-bottom: 3rem;
+    border-width: 0.2rem;
+    border-radius: 0.5rem;
+    border-style: solid ;
+    border-color: var(--primary);
+}
+section h1{
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 4vh;
+}
+h1 span{
+    color: var(--font
+    );
+
+}
+.btn-daftar{
+    color: var(--primary);
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    color: var(--bg);
     width: 100%;
-    border: 3px solid green;
-    margin: 10px;
-    margin-left: 50% ;
-    position: absolute;
-    
-    
-
-}
-.form-daftar{
-
+    text-align: center;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
 }
 
+.footer {
+    bottom:0;
+    left:0;
+    width:100%;
+    text-wrap: wrap;
+    background-color: #D0DAEE;
+    padding: 3vh;
+    border: #6c7fedee;
+  }
+  .content-footer{
+    max-width: 80%;
+    margin-bottom: 0.3rem;
+  }
 
 
 /* laptop */
@@ -144,7 +182,7 @@ body{
         transform-origin: 0 0;
     }
     .navbar .navbar-nav a:hover::after{
-        transform: scaleX(0.3);
+        transform: scaleX(0.7);
     }
 
     .about .row{
@@ -162,6 +200,13 @@ body{
         margin-top: 1rem;
         font-size: 2rem;
     }
+
+    .hero{
+        min-height: 45vh;
+        width: 80;
+        padding-top: 70px;
+    }
+
 }
 
 /* mobile */
