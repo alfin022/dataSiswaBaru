@@ -1,7 +1,9 @@
 :root{
-    --primary:#6c7fed;
+    --primary:#4589D8;
+    --secondary:#417abb;
     --bg:#f9f6f6;
     --font:#0e0e0e;
+    font-size: 1rem;
 }
 *{
     margin: 0;
@@ -15,14 +17,16 @@ body{
     font-family: 'poppins',sans-serif;
     background-color: var(--bg);
     color: #0e0e0e;
-    min-height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 7%;
+    padding: 0.5rem 6%;
     background-color: rgba(252, 251, 250, 0.75);
     border-bottom: 2px solid var(--primary);
     position: fixed;
@@ -30,7 +34,7 @@ body{
     left: 0;
     right: 0;
     z-index: 999;
-
+    backdrop-filter: blur(5px);
 }
 
 .navbar .navbar-logo{
@@ -80,7 +84,13 @@ body{
     position: relative;
     margin: auto;
     width: 75%;
-    padding-top: 100px;
+    padding-top: 150px;
+    padding-bottom: 120PX;
+}
+.w-box{
+    background-color: #ffffffda;
+    padding: 150PX 7rem;
+    backdrop-filter: blur(5px);
 }
 .hero::after{
     content:  '';
@@ -90,41 +100,55 @@ body{
     text-align: center;
     align-self: center;
     width:100%;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .selamat-datang h1{
     align-items: center;
-    border-bottom: 0.2rem solid var(--primary);
-    margin-bottom: 1rem;
+    border-bottom: 0.3rem solid var(--primary);
 }
 section div{
-    padding: 7vh 5vh;
-    margin-bottom: 3rem;
-    border-width: 0.2rem;
-    border-radius: 0.5rem;
-    border-style: solid ;
-    border-color: var(--primary);
+    padding: 6vh 5vh;
+    margin-bottom: 4rem;
+    margin-top: auto;
+    min-height: 45vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 section h1{
     color: var(--primary);
     font-weight: 700;
-    font-size: 4vh;
+    font-size: 6vh;
+    font-style: italic;
+    text-decoration: underline;
+    text-decoration-color:var(--font) ;
 }
 h1 span{
-    color: var(--font
-    );
-
+    color: var(--font);
+    text-decoration: underline;
+    text-decoration-color:var(--primary) ;
 }
+p{
+    padding: 3rem 0;
+}
+
 .btn-daftar{
     color: var(--primary);
-    margin-top: 1rem;
+    margin:auto;
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1.3rem 0;
     color: var(--bg);
     width: 100%;
     text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
     background-color: var(--primary);
-    border-radius: 0.5rem;
+
+}
+.btn-daftar:hover{
+    background-color: var(--secondary);
+    font-size: 1.4rem;
+}
+.radius-2{
+    border-radius: 2rem;
 }
 
 .footer {
@@ -135,6 +159,7 @@ h1 span{
     background-color: #D0DAEE;
     padding: 3vh;
     border: #6c7fedee;
+    margin-top: auto;
   }
   .content-footer{
     max-width: 80%;
@@ -168,11 +193,11 @@ h1 span{
         right: -250%;
         background-color: rgba(247, 240, 240, 0.8);
         width: 30rem;
-        height: 100vh;
+        height: 800vh;
         transition: 1s;
         border-left: 0.2rem solid var(--primary);
     }
-    .navbar .navbar-nav.active{
+    .navbar .navbar-nav .active{
         right: 0;
     }
 
@@ -191,26 +216,14 @@ h1 span{
         transform: scaleX(0.7);
     }
 
-    .about .row{
-        flex-wrap: wrap;
-    }
-    .about .row .about-img img{
-        height: 24rem;
-        object-fit: cover;
-        object-position: center;
-    }
-    .about .row .content{
-        padding: 0;
-    }
-    .about .row .content h3{
-        margin-top: 1rem;
-        font-size: 2rem;
-    }
-
     .hero{
         min-height: 45vh;
         width: 80;
-        padding-top: 70px;
+        padding-top: 170px;
+    }
+    .btn-daftar{
+        font-size: 70%;
+        padding: 0.7rem;
     }
 
 }
