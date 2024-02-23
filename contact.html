@@ -46,10 +46,97 @@
     <!-- Selamat Datang -->
     <div class="hero">
 	<form name="submit-to-google-sheet">
-		<input name="email" type="email" placeholder="Email" required>
+
+
+        <div id="i-anak" class="i-form">
+            <h1>IDENTITAS<span>ANAK</span></h1>
+            <div class="col-form">
+                <div class="i-col-form">
+                    <label for="nama" class="l-col-form">Nama Lengkap* : </label>
+                    <input name="nama" type="text" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="jk" class="l-col-form">Jenis Kelamin* : </label>
+                    <input type="radio" name="jk" value="L"><label for="L">Laki-Laki</label>
+                    <input type="radio" name="jk" value="P"><label for="P">Perempuan</label>
+                </div>
+                <div class="i-col-form">
+                    <label for="nik" class="l-col-form">NIK* : </label>
+                    <input name="nik" type="number" placeholder="NIK" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="no-kk" class="l-col-form">NO.KK* : </label>
+                    <input name="no-kk" type="number" placeholder="NO.KK" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="tempat-lahir" class="l-col-form">Tempat Lahir* : </label>
+                    <input name="tempat-lahir" type="text" placeholder="Tempat Lahir" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="tanggal-lahir" class="l-col-form">Tanggal Lahir* : </label>
+                    <input name="tanggal-lahir" type="date" placeholder="Tanggal Lahir" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="akta" class="l-col-form">No Registrasi Akta : </label>
+                    <input name="akta" type="text" placeholder="No Registrasi Akta">
+                </div>
+                <div class="i-col-form">
+                    <label for="agama" class="l-col-form">Agama* : </label>
+                    <select name="agama" id="agama">
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Protestan</option>
+                        <option value="Katholic">Catholic</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Konghucu">Konghucu</option>
+                        <option value="Kepercayaan Kepada Tuhan YME">Kepercayaan Kepada Tuhan YME</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+                <div class="i-col-form">
+                    <label for="alamat" class="l-col-form">Alamat* : </label>
+                    <input name="alamat" type="number" placeholder="Alamat" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="RT" class="l-col-form">RT : </label>
+                    <input name="RT" type="number" placeholder="RT">
+                    <label for="RW" class="l-col-form">RW : </label>
+                    <input name="RW" type="number" placeholder="RW">
+                </div>
+                <div class="i-col-form">
+                    <label for="no-telp" class="l-col-form">No Telephone* : </label>
+                    <input name="no-telp" type="number" placeholder="no-telp" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="no-telp" class="l-col-form">No Telephone* : </label>
+                    <input name="no-telp" type="number" placeholder="no-telp" required>
+                </div>
+            </div>
+        </div>
+        <div id="i-ayah" class="i-form">
+            <h1>IDENTITAS<SPAN>Ayah</SPAN></h1>
+            <div class="col-form">
+                <div class="i-col-form">
+                    <label for="n-ayah" class="l-col-form">Nama Lengkap* : </label>
+                    <input name="n-ayah" type="text" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="i-col-form"></div>
+                <div class="i-col-form"></div>
+            </div>
+        </div>
+        <div id="i-ibu" class="i-form">
+            <h1></h1>
+            <div class="col-form">
+                <div class="i-col-form"></div>
+                <div class="i-col-form"></div>
+                <div class="i-col-form"></div>
+            </div>
+        </div>  
+
+
 
 		<!-- <input type="file" name="ktp"> -->
-		<button type="submit">Send</button>
+		<button type="submit" class="btn-daftar radius-2">Daftar</button>
 	  </form>
 	  </div>
 
@@ -92,7 +179,7 @@
 		  e.preventDefault()
 		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 			.then(response => {
-				window.location.href = 'index.html'
+                alert('daftar sukses')
 				console.log('Success!', response)
 			})
 			.catch(error => console.error('Error!', error.message))

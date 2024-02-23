@@ -3,7 +3,7 @@
     --secondary:#417abb;
     --bg:#f9f6f6;
     --font:#0e0e0e;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 *{
     margin: 0;
@@ -118,8 +118,10 @@ section h1{
     font-weight: 700;
     font-size: 6vh;
     font-style: italic;
-    text-decoration: underline;
     text-decoration-color:var(--font) ;
+}
+h1{
+    text-decoration: underline;
 }
 h1 span{
     color: var(--font);
@@ -137,19 +139,73 @@ p{
     padding: 1.3rem 0;
     color: var(--bg);
     width: 100%;
+    max-height: 200px;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 700;
     background-color: var(--primary);
+    box-sizing: border-box;
+    border: 0.2rem var(--primary) solid;
 
 }
 .btn-daftar:hover{
-    background-color: var(--secondary);
-    font-size: 1.4rem;
+    background-color: var(--bg);
+    color: #417abb;
+    box-sizing: border-box;
+    border: 0.2rem var(--primary) solid;
 }
 .radius-2{
     border-radius: 2rem;
 }
+form{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.i-form{
+    margin: 2rem 0;
+    width: 100%;
+}
+.i-form h1{
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+.l-col-form{
+    display: block;
+    position: relative;
+    padding-right: auto;
+}
+.i-col-form input[type=radio]{
+    justify-content: space-between;
+    margin: auto;
+    padding-right: 3rem;
+    margin-left: 25%;    
+}
+.i-col-form input[type=text],input[type=number],input[type=date],select{
+    border: 0.2rem solid var(--primary);
+    border-radius: 15px;
+    width: 100%;
+    padding: 2vh;
+    margin: 2vh 0;
+    text-transform: capitalize;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
 
 .footer {
     bottom:0;
@@ -225,7 +281,14 @@ p{
         font-size: 70%;
         padding: 0.7rem;
     }
+    .i-form{
+        margin: 1rem 0;
+    }
+    .i-col-form label{
 
+        padding-left: 5px;
+    }
+ 
 }
 
 /* mobile */
