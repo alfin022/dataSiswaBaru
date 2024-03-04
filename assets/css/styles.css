@@ -177,6 +177,10 @@ form{
     position: relative;
     padding-right: auto;
 }
+.l-col-form.primary::before{
+    content: "*";
+    color: red;
+}
 .i-col-form input[type=radio]{
     justify-content: space-between;
     margin: auto;
