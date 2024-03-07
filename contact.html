@@ -52,28 +52,28 @@
             <h1>IDENTITAS<span>ANAK</span></h1>
             <div class="col-form">
                 <div class="i-col-form">
-                    <label for="nama" class="l-col-form">Nama Lengkap* : </label>
+                    <label for="nama" class="l-col-form primary">Nama Lengkap : </label>
                     <input name="nama" type="text" placeholder="Nama Lengkap" required>
                 </div>
                 <div class="i-col-form">
-                    <label for="jk" class="l-col-form">Jenis Kelamin* : </label>
-                    <input type="radio" name="jk" value="L"><label for="L">Laki-Laki</label>
+                    <label for="jk" class="l-col-form primary">Jenis Kelamin : </label>
+                    <input type="radio" name="jk" value="L" required><label for="L">Laki-Laki</label>
                     <input type="radio" name="jk" value="P"><label for="P">Perempuan</label>
                 </div>
                 <div class="i-col-form">
-                    <label for="nik" class="l-col-form">NIK* : </label>
+                    <label for="nik" class="l-col-form primary">NIK : </label>
                     <input name="nik" type="number" placeholder="NIK" required>
                 </div>
                 <div class="i-col-form">
-                    <label for="no-kk" class="l-col-form">NO.KK* : </label>
+                    <label for="no-kk" class="l-col-form primary">NO.KK : </label>
                     <input name="no-kk" type="number" placeholder="NO.KK" required>
                 </div>
                 <div class="i-col-form">
-                    <label for="tempat-lahir" class="l-col-form">Tempat Lahir* : </label>
+                    <label for="tempat-lahir" class="l-col-form primary">Tempat Lahir : </label>
                     <input name="tempat-lahir" type="text" placeholder="Tempat Lahir" required>
                 </div>
                 <div class="i-col-form">
-                    <label for="tanggal-lahir" class="l-col-form">Tanggal Lahir* : </label>
+                    <label for="tanggal-lahir" class="l-col-form primary">Tanggal Lahir : </label>
                     <input name="tanggal-lahir" type="date" placeholder="Tanggal Lahir" required>
                 </div>
                 <div class="i-col-form">
@@ -81,8 +81,8 @@
                     <input name="akta" type="text" placeholder="No Registrasi Akta">
                 </div>
                 <div class="i-col-form">
-                    <label for="agama" class="l-col-form">Agama* : </label>
-                    <select name="agama" id="agama">
+                    <label for="agama" class="l-col-form primary">Agama : </label>
+                    <select name="agama" id="agama" required>
                         <option value="Islam">Islam</option>
                         <option value="Kristen">Protestan</option>
                         <option value="Katholic">Catholic</option>
@@ -94,21 +94,27 @@
                     </select>
                 </div>
                 <div class="i-col-form">
-                    <label for="alamat" class="l-col-form">Alamat* : </label>
-                    <input name="alamat" type="number" placeholder="Alamat" required>
+                    <label for="alamat" class="l-col-form primary">Alamat : </label>
+                    <input name="alamat" type="text" placeholder="Alamat" required>
                 </div>
-                <div class="i-col-form">
+                <div class="i-col-form primary">
                     <label for="RT" class="l-col-form">RT : </label>
                     <input name="RT" type="number" placeholder="RT">
                     <label for="RW" class="l-col-form">RW : </label>
                     <input name="RW" type="number" placeholder="RW">
                 </div>
+<<<<<<< HEAD
                 <div class="i-col-form">
                     <label for="dusun" class="l-col-form">No Telephone* : </label>
                     <input name="dusun" type="text" placeholder="no-telp" required>
+=======
+                <div class="i-col-form primary">
+                    <label for="no-telp" class="l-col-form">No Telephone : </label>
+                    <input name="no-telp" type="number" placeholder="no-telp" required>
+>>>>>>> 32dd5e5c51a42613b51aee5bf4c2e042e2545700
                 </div>
                 <div class="i-col-form">
-                    <label for="no-telp" class="l-col-form">No Telephone* : </label>
+                    <label for="no-telp" class="l-col-form">No Telephone : </label>
                     <input name="no-telp" type="number" placeholder="no-telp" required>
                 </div>
             </div>
@@ -117,11 +123,14 @@
             <h1>IDENTITAS<SPAN>Ayah</SPAN></h1>
             <div class="col-form">
                 <div class="i-col-form">
-                    <label for="n-ayah" class="l-col-form">Nama Lengkap* : </label>
-                    <input name="n-ayah" type="text" placeholder="Nama Lengkap" required>
+                    <label for="n-ayah" class="l-col-form primary">Nama Lengkap : </label>
+                    <input name="n-ayah" type="text" placeholder="n-ayah" required>
                 </div>
-                <div class="i-col-form"></div>
-                <div class="i-col-form"></div>
+                <div class="i-col-form">
+                    <label for="nik-ayah" class="l-col-form">NIK : </label>
+                    <input name="nik-ayah" type="text" placeholder="Nama Lengkap" required>
+                </div>
+                
             </div>
         </div>
         <div id="i-ibu" class="i-form">
