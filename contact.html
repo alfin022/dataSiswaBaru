@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kontak</title>
 
-	
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+
+
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    
+
     <!-- bootstrap
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -22,11 +23,12 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
+
 <body>
 
-	 <!-- nav -->
+    <!-- nav -->
 
-	 <nav class="navbar">
+    <nav class="navbar">
         <a href="#" class="navbar-logo">Sdn<span>Walahar1</span>.</a>
 
         <div class="navbar-extra">
@@ -41,155 +43,262 @@
     </nav>
     <!-- end nav -->
 
-	
+
     <!-- konten -->
     <!-- Selamat Datang -->
     <div class="hero">
-	<form name="submit-to-google-sheet">
+        <form name="submit-to-google-sheet">
 
 
-        <div id="i-anak" class="i-form">
-            <h1>IDENTITAS<span>ANAK</span></h1>
-            <div class="col-form">
-                <div class="i-col-form">
-                    <label for="nama" class="l-col-form primary">Nama Lengkap : </label>
-                    <input name="nama" type="text" placeholder="Nama Lengkap" required>
+            <div id="i-anak" class="i-form">
+                <h1>IDENTITAS<span>ANAK</span></h1>
+                <div class="col-form">
+                    <div class="i-col-form">
+                        <label for="nama" class="l-col-form primary">Nama Lengkap : </label>
+                        <input name="nama" type="text" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="i-col-form">
+                        <label for="jk" class="l-col-form primary">Jenis Kelamin : </label>
+                        <input type="radio" name="jk" value="L" required><label for="L">Laki-Laki</label>
+                        <input type="radio" name="jk" value="P"><label for="P">Perempuan</label>
+                    </div>
+                    <div class="i-col-form">
+                        <label for="nik" class="l-col-form primary">NIK : </label>
+                        <input name="nik" type="number" placeholder="NIK" required>
+                    </div>
+                    <div class="i-col-form">
+                        <label for="no-kk" class="l-col-form primary">NO.KK : </label>
+                        <input name="no-kk" type="number" placeholder="NO.KK" required>
+                    </div>
+                    <div class="i-col-form">
+                        <label for="tempat-lahir" class="l-col-form primary">Tempat Lahir : </label>
+                        <input name="tempat-lahir" type="text" placeholder="Tempat Lahir" required>
+                    </div>
+                    <div class="i-col-form">
+                        <label for="tanggal-lahir" class="l-col-form primary">Tanggal Lahir : </label>
+                        <input name="tanggal-lahir" type="date" placeholder="Tanggal Lahir" required>
+                    </div>
+                    <div class="i-col-form">
+                        <label for="akta" class="l-col-form">No Registrasi Akta : </label>
+                        <input name="akta" type="text" placeholder="No Registrasi Akta">
+                    </div>
+                    <div class="i-col-form">
+                        <div class="i-col-form">
+                            <label for="berkebutuhan" class="l-col-form">Berkebutuhan Khusus : </label>
+                            <select name="berkebutuhan" id="berkebutuhan">
+                                <option value="Tidak Ada">Tidak Ada</option>
+                                <option value="autis">autis</option>
+                                <option value="bakat istimewa">bakat istimewa</option>
+                                <option value="cerdas istimewa">cerdas istimewa</option>
+                                <option value="daksa ringan">daksa ringan</option>
+                                <option value="daksa sedang">daksa sedang</option>
+                                <option value="down syndrome">down syndrome</option>
+                                <option value="grahita ringan">grahita ringan</option>
+                                <option value="grahita sedang">grahita sedang</option>
+                                <option value="hyperaktif">hyperaktif</option>
+                                <option value="indigo">indigo</option>
+                                <option value="kesulitan belajar">kesulitan belajar</option>
+                                <option value="laras">laras</option>
+                                <option value="narkoba">narkoba</option>
+                                <option value="netra">netra</option>
+                                <option value="rungu">rungu</option>
+                                <option value="wicara">wicara</option>
+                            </select>
+                        </div>
+                        <label for="agama" class="l-col-form primary">Agama : </label>
+                        <select name="agama" id="agama" required>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Protestan</option>
+                            <option value="Katholic">Catholic</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Konghucu">Konghucu</option>
+                            <option value="Kepercayaan Kepada Tuhan YME">Kepercayaan Kepada Tuhan YME</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="i-col-form">
+                        <label for="alamat" class="l-col-form primary">Alamat : </label>
+                        <input name="alamat" type="text" placeholder="Alamat" required>
+                    </div>
+                    <div class="i-col-form primary">
+                        <label for="RT" class="l-col-form">RT : </label>
+                        <input name="RT" type="number" placeholder="RT">
+                        <label for="RW" class="l-col-form">RW : </label>
+                        <input name="RW" type="number" placeholder="RW">
+                    </div>
+                    <div class="i-col-form">
+                        <label for="dusun" class="l-col-form">Dusun : </label>
+                        <input name="dusun" type="text" placeholder="Dusun" required>
+                        <label for="desa" class="l-col-form">Desa/Kelurahan : </label>
+                        <input name="desa" type="text" placeholder="Desa/Kelurahan" required>
+                        <label for="kode-pose" class="l-col-form">Kode Pose : </label>
+                        <input name="kode-pose" type="text" placeholder="Kode Pose" required>
+                        <div class="i-col-form primary">
+                            <label for="no-telp" class="l-col-form">No Telephone : </label>
+                            <input name="no-telp" type="number" placeholder="no-telp" required>
+                        </div>
+                    </div>
                 </div>
-                <div class="i-col-form">
-                    <label for="jk" class="l-col-form primary">Jenis Kelamin : </label>
-                    <input type="radio" name="jk" value="L" required><label for="L">Laki-Laki</label>
-                    <input type="radio" name="jk" value="P"><label for="P">Perempuan</label>
-                </div>
-                <div class="i-col-form">
-                    <label for="nik" class="l-col-form primary">NIK : </label>
-                    <input name="nik" type="number" placeholder="NIK" required>
-                </div>
-                <div class="i-col-form">
-                    <label for="no-kk" class="l-col-form primary">NO.KK : </label>
-                    <input name="no-kk" type="number" placeholder="NO.KK" required>
-                </div>
-                <div class="i-col-form">
-                    <label for="tempat-lahir" class="l-col-form primary">Tempat Lahir : </label>
-                    <input name="tempat-lahir" type="text" placeholder="Tempat Lahir" required>
-                </div>
-                <div class="i-col-form">
-                    <label for="tanggal-lahir" class="l-col-form primary">Tanggal Lahir : </label>
-                    <input name="tanggal-lahir" type="date" placeholder="Tanggal Lahir" required>
-                </div>
-                <div class="i-col-form">
-                    <label for="akta" class="l-col-form">No Registrasi Akta : </label>
-                    <input name="akta" type="text" placeholder="No Registrasi Akta">
-                </div>
-                <div class="i-col-form">
-                    <label for="agama" class="l-col-form primary">Agama : </label>
-                    <select name="agama" id="agama" required>
-                        <option value="Islam">Islam</option>
-                        <option value="Kristen">Protestan</option>
-                        <option value="Katholic">Catholic</option>
-                        <option value="Hindu">Hindu</option>
-                        <option value="Budha">Budha</option>
-                        <option value="Konghucu">Konghucu</option>
-                        <option value="Kepercayaan Kepada Tuhan YME">Kepercayaan Kepada Tuhan YME</option>
-                        <option value="Lainnya">Lainnya</option>
-                    </select>
-                </div>
-                <div class="i-col-form">
-                    <label for="alamat" class="l-col-form primary">Alamat : </label>
-                    <input name="alamat" type="text" placeholder="Alamat" required>
-                </div>
-                <div class="i-col-form primary">
-                    <label for="RT" class="l-col-form">RT : </label>
-                    <input name="RT" type="number" placeholder="RT">
-                    <label for="RW" class="l-col-form">RW : </label>
-                    <input name="RW" type="number" placeholder="RW">
-                </div>
-                <div class="i-col-form">
-                    <label for="dusun" class="l-col-form">No Telephone* : </label>
-                    <input name="dusun" type="text" placeholder="no-telp" required>
-                <div class="i-col-form primary">
-                    <label for="no-telp" class="l-col-form">No Telephone : </label>
-                    <input name="no-telp" type="number" placeholder="no-telp" required>
-                </div>
-                <div class="i-col-form">
-                    <label for="no-telp" class="l-col-form">No Telephone : </label>
-                    <input name="no-telp" type="number" placeholder="no-telp" required>
-                </div>
-            </div>
-        </div>
-        <div id="i-ayah" class="i-form">
-            <h1>IDENTITAS<SPAN>Ayah</SPAN></h1>
-            <div class="col-form">
-                <div class="i-col-form">
-                    <label for="n-ayah" class="l-col-form primary">Nama Lengkap : </label>
-                    <input name="n-ayah" type="text" placeholder="n-ayah" required>
-                </div>
-                <div class="i-col-form">
-                    <label for="nik-ayah" class="l-col-form">NIK : </label>
-                    <input name="nik-ayah" type="text" placeholder="Nama Lengkap" required>
+
+
+
+                <!-- IDENTITAS Ayah -->
+                <div id="i-ayah" class="i-form">
+                    <h1>IDENTITAS<SPAN>Ayah</SPAN></h1>
+                    <div class="col-form">
+                        <div class="i-col-form">
+                            <label for="n-ayah" class="l-col-form primary">Nama Lengkap : </label>
+                            <input name="n-ayah" type="text" placeholder="Nama Lengkap" required>
+                        </div>
+                        <div class="i-col-form">
+                            <label for="nik-ayah" class="l-col-form">NIK : </label>
+                            <input name="nik-ayah" type="text" placeholder="NIK" required>
+                        </div>
+                        <div class="i-col-form">
+                            <label for="tahun-lahir-ayah" class="l-col-form">Tahun Lahir : </label>
+                            <input name="tahun-lahir-ayah" type="text" placeholder="Tahun Lahir" required>
+                        </div>
+                        <div class="i-col-form">
+                            <label for="pendidikan-ayah" class="l-col-form">Pendidikan Ayah : </label>
+                            <input type="text" name="Pendidikan-ayah" placeholder="Pendidikan-ayah">
+                        </div>
+                        <div class="i-col-form">
+                            <label for="pekerjaan-ayah" class="l-col-form">Pekerjaan Ayah : </label>
+                            <input type="text" name="pekerjaan-ayah" placeholder="pekerjaan-ayah">
+                        </div>
+                        <div class="i-col-form">
+                            <label for="berkebutuhan" class="l-col-form">Berkebutuhan Khusus : </label>
+                            <select name="berkebutuhan-ayah" id="berkebutuhan">
+                                <option value="Tidak Ada">Tidak Ada</option>
+                                <option value="autis">autis</option>
+                                <option value="bakat istimewa">bakat istimewa</option>
+                                <option value="cerdas istimewa">cerdas istimewa</option>
+                                <option value="daksa ringan">daksa ringan</option>
+                                <option value="daksa sedang">daksa sedang</option>
+                                <option value="down syndrome">down syndrome</option>
+                                <option value="grahita ringan">grahita ringan</option>
+                                <option value="grahita sedang">grahita sedang</option>
+                                <option value="hyperaktif">hyperaktif</option>
+                                <option value="indigo">indigo</option>
+                                <option value="kesulitan belajar">kesulitan belajar</option>
+                                <option value="laras">laras</option>
+                                <option value="narkoba">narkoba</option>
+                                <option value="netra">netra</option>
+                                <option value="rungu">rungu</option>
+                                <option value="wicara">wicara</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 
+                <!-- IDENTITAS IBU -->
+          <!-- IDENTITAS Ayah -->
+          <div id="i-ayah" class="i-form">
+            <h1>IDENTITAS<SPAN>IBU</SPAN></h1>
+            <div class="col-form">
+                <div class="i-col-form">
+                    <label for="n-ibu" class="l-col-form primary">Nama Lengkap : </label>
+                    <input name="n-ibu" type="text" placeholder="Nama Lengkap" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="nik-ibu" class="l-col-form">NIK : </label>
+                    <input name="nik-ibu" type="text" placeholder="NIK" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="tahun-lahir-ibu" class="l-col-form">Tahun Lahir : </label>
+                    <input name="tahun-lahir-ibu" type="text" placeholder="Tahun Lahir" required>
+                </div>
+                <div class="i-col-form">
+                    <label for="pendidikan-ibu" class="l-col-form">Pendidikan Ayah : </label>
+                    <input type="text" name="Pendidikan-ibu" placeholder="Pendidikan-ibu">
+                </div>
+                <div class="i-col-form">
+                    <label for="pekerjaan-ibu" class="l-col-form">Pekerjaan Ayah : </label>
+                    <input type="text" name="pekerjaan-ibu" placeholder="pekerjaan-ibu">
+                </div>
+                <div class="i-col-form">
+                    <label for="berkebutuhan" class="l-col-form">Berkebutuhan Khusus : </label>
+                    <select name="berkebutuhan-ibu" id="berkebutuhan">
+                        <option value="Tidak Ada">Tidak Ada</option>
+                        <option value="autis">autis</option>
+                        <option value="bakat istimewa">bakat istimewa</option>
+                        <option value="cerdas istimewa">cerdas istimewa</option>
+                        <option value="daksa ringan">daksa ringan</option>
+                        <option value="daksa sedang">daksa sedang</option>
+                        <option value="down syndrome">down syndrome</option>
+                        <option value="grahita ringan">grahita ringan</option>
+                        <option value="grahita sedang">grahita sedang</option>
+                        <option value="hyperaktif">hyperaktif</option>
+                        <option value="indigo">indigo</option>
+                        <option value="kesulitan belajar">kesulitan belajar</option>
+                        <option value="laras">laras</option>
+                        <option value="narkoba">narkoba</option>
+                        <option value="netra">netra</option>
+                        <option value="rungu">rungu</option>
+                        <option value="wicara">wicara</option>
+                    </select>
+                </div>
             </div>
         </div>
-        <div id="i-ibu" class="i-form">
-            <h1></h1>
-            <div class="col-form">
-                <div class="i-col-form"></div>
-                <div class="i-col-form"></div>
-                <div class="i-col-form"></div>
-            </div>
-        </div>  
+
+
+                <!-- <input type="file" name="ktp"> -->
+                <button type="submit" class="btn-daftar radius-2">Daftar</button>
+        </form>
+    </div>
 
 
 
-		<!-- <input type="file" name="ktp"> -->
-		<button type="submit" class="btn-daftar radius-2">Daftar</button>
-	  </form>
-	  </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="content-footer">
+            <h2>sdn walahar 1</h2>
+        </div>
+        <div>
+            <li>
+                <a href="">INFORMASI</a>
 
+            </li>
+            <li>
+                <a href="">KONTAK KAMI</a>
 
+            </li>
+            <li>
 
-	    <!-- footer -->
-		<footer class="footer">
-			<div class="content-footer">
-				<h2>sdn walahar 1</h2>
-			</div>
-			<div>
-				<li>
-					<a href="">INFORMASI</a>
-				
-				</li>
-				<li>
-					<a href="">KONTAK KAMI</a>
-				
-				</li>
-				<li>
-				
-					<a href="">MEDIA SOSIAL</a>
-				</li>
-			</div>
-		</footer>
-	<!-- end footer -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <a href="">MEDIA SOSIAL</a>
+            </li>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script>
         feather.replace();
     </script>
     <script src="assets/js/scripts.js"></script>
-	  
-	  <script>
-		const scriptURL = 'https://script.google.com/macros/s/AKfycbyaLGWInDbVc2x1Dl5h6LisSqioKxTsKP8NcO6xAzenegmrslqh10ewfZp75Dz592ru/exec'
-		const form = document.forms['submit-to-google-sheet']
-	  
-		form.addEventListener('submit', e => {
-		  e.preventDefault()
-		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => {
-                alert('daftar sukses')
-				console.log('Success!', response)
-			})
-			.catch(error => console.error('Error!', error.message))
-		})
-	  </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyaLGWInDbVc2x1Dl5h6LisSqioKxTsKP8NcO6xAzenegmrslqh10ewfZp75Dz592ru/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    alert('daftar sukses')
+                    console.log('Success!', response)
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 </body>
+
 </html>
