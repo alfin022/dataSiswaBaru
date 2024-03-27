@@ -83,6 +83,7 @@ header ul li a{
 }
 section{
     scroll-snap-align: start;
+    height: 100vh;
 }
 .banner{
     position:relative;
