@@ -21,9 +21,10 @@ header{
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
-    padding: 40px 70px;
+    padding: 10px 70px;
     z-index: 999;
 }
+
 .sticky{
     padding: 5px 70px;
     background: var(--bg);
@@ -68,6 +69,7 @@ header li{
     position: relative;
     list-style: none;
     padding: 10px 5px;
+    border-radius: 20px;
 }
 header ul li a{
     position: relative;
@@ -77,14 +79,22 @@ header ul li a{
     font-weight: 500;
     transition: 0.6s;
 }
+header li:hover{
+    background-color: rgb(15, 15, 15);
+}
 /* content */
+h1{
+    font-size: 2rem;
+    padding: 1.7rem 0;
+}
 .container{
     height: auto;
     justify-content: center;
     text-align: center;
+    vertical-align: middle;
 }
 section{
-    height: 100vh;
+    height: 80vh;
     color: white;
     margin-bottom: 5rem;
 }
@@ -93,32 +103,39 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+}
+.grid-daftar{
+    position: relative;
 }
 .daftar main{
     height: 45vh;
     width: 45%;
     border: 2px solid #fff;
-    margin: 2rem 3rem;
+    margin: 4rem 3rem;
+    word-break: break-all;
 }
 .daftar-content{
     padding: 2rem;
+    
 }
 .daftar-btn{
     left: 0;
     bottom: 0;
-    height: 3rem;
+    right: 0;
+    position: absolute;
     width: 100%;
-    display: inline-block;
+    padding: 1.7rem;
     color: black;
     text-decoration: none;
     vertical-align: middle;
     background-color: white;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    border-top: 3px solid #fff;
 }
 .daftar-btn:hover{
-    background-color: var(--primary);
+    background-color: #121212;
+    color: white;
 }
 .banner{
     position:relative;
@@ -127,18 +144,22 @@ section{
     background-image: url('/assets/img/hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(60%);
     align-items: center;
     display: flex;
-    animation: banner-change 20s infinite ease-in-out;
+    animation: banner-change 35s infinite ease-in-out;
     overflow: hidden;
-
 }
 .banner .content{
     width: 100%;
     border-radius: 0 0.7rem 0.7rem 0;
 }
-
+#panel-medsos{
+    padding: 3rem 0;
+    justify-content: center;
+}
+#contact{
+    margin-top: 15vh;
+}
 .foot{
     width: 100%;
     height: 25vh;
@@ -146,6 +167,8 @@ section{
     background-color: var(--blk);
     border-top: 5px solid var(--primary);
 }
+
+
 
 @keyframes banner-change{
     0%{
@@ -167,11 +190,30 @@ section{
         background-image: url('/assets/img/hero.jpg');
     }
 }
-@media only screen and (max-width : 800px){
+@media only screen and (max-width : 1366px){
     html{
         font-size: 75%;
     }
-    .panel-content main{
-        width: 100%;
+    section{
+        height: 80vh;
+    }
+    .daftar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .daftar main{
+        height: 35vh;
+        width: 85%;
+        margin: 2rem 1rem;
+    }
+}@media only screen and (max-width : 900px){
+    html{
+        font-size: 65%;
+    }
+}
+@media only screen and (max-width : 500px){
+    html{
+        font-size: 65%;
     }
 }
