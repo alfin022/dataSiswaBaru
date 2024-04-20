@@ -13,6 +13,12 @@ document.addEventListener('click', function (e) {
         navbarNav.classList.remove ('active');
     }
 });
-
+function iAnak(elem){
+    var bAnak = document.getElementById("i-anak");
+    if(elem.id == "n-i-anak"){
+        bAnak.classList.add("d-none");  
+        document.getElementById("i-alamat").classList.remove("d-none")
+    }
+}
 
 

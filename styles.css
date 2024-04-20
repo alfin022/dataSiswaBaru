@@ -199,6 +199,9 @@ section{
 .hidden{
     visibility: hidden;
 }
+.d-none{
+    display: none;
+}
 form{
     width: 60%;
     height: 500vh;
