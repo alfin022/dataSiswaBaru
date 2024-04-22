@@ -34,7 +34,7 @@
     <!-- konten -->
     <!-- Selamat Datang -->
     <div class="container pad-top contain-content">
-        <form name="submit-to-google-sheet">
+        <form name="submit-to-google-sheet" id="form-daftar-langsung">
 
             <!-- identitas data anak -->
             <div id="i-anak">
@@ -42,120 +42,132 @@
                     IDENTITAS ANAK
                 </h1>
                 <div class="input-contain">
-                    <P>Nama Lengkap &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Nama Lengkap &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Jenis Kelamin &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Jenis Kelamin &nbsp; </P>
+                    <input type="radio" name="jk" value="L" required><label for="L">Laki-Laki</label>
+                    <input type="radio" name="jk" value="P"><label for="P">Perempuan</label>
                 </div>
                 <div class="input-contain">
-                    <P>NIK &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>NIK &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>No.KK &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>No.KK &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Tempat Lahir &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Tempat Lahir &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Tanggal Lahir &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Tanggal Lahir &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>No. Registrasi Akta &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>No. Registrasi Akta &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Agama &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Agama &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Anak Ke &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Anak Ke &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <!-- tombol -->
                 <div class="button">
                     <p id="b-i-anak" class="hidden"> Kembali</p>
-                    <button id="n-i-anak" onclick="iAnak(this);" > Selanjutnya</button>
+                    <p id="n-i-anak" onclick="iAnak(this);" > Selanjutnya</p>
                 </div>
             </div>
             <!-- identitas data alamat -->
             <div id="i-alamat" class="d-none">
                 <h1> Alamat Siswa </h1>
                 <div class="input-contain">
-                    <P>Alamat &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Alamat &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>RT &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>RT &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>RW &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>RW &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Dusun &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Dusun &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Desa / Kelurahan &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Desa / Kelurahan &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Kode Pos &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Kode Pos &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <!-- tombol -->
                 <div class="button">
-                    <p id="b-i-alamat"> Kembali</p>
-                    <p id="n-i-alamat"> Selanjutnya</p>
+                    <p id="b-i-alamat" onclick="iAlamat(this)"> Kembali</p>
+                    <p id="n-i-alamat" onclick="iAlamat(this);"> Selanjutnya</p>
                 </div>
             </div>
             
             <div id="i-ayah" class="d-none">
                 <h1>Identitas Ayah Kandung</h1>
                 <div class="input-contain">
-                    <P>Nama Lengkap  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Nama Lengkap  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>NIK  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>NIK  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Tahun lahir  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Tahun lahir  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Pendidikan Terakhir  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Pendidikan Terakhir  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Pekerjaan  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Pekerjaan  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <!-- tombol -->
                 <div class="button">
-                    <p id="b-i-ayah"> Kembali</p>
-                    <p id="n-i-ayah"> Selanjutnya</p>
+                    <p id="b-i-ayah" onclick="iAyah(this);"> Kembali</p>
+                    <p id="n-i-ayah" onclick="iAyah(this);"> Selanjutnya</p>
                 </div>
             </div>
             <div id="i-ibu" class="d-none">
                 <h1>Identitas Ibu Kandung</h1>
                 <div class="input-contain">
-                    <P>Nama Lengkap  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Nama Lengkap  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>NIK  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>NIK  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Tahun lahir  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Tahun lahir  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Pendidikan Terakhir  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Pendidikan Terakhir  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 <div class="input-contain">
-                    <P>Pekerjaan  &nbsp; </P><input type="text" class="input-form"></th>
+                    <P>Pekerjaan  &nbsp; </P><input type="text" class="input-form"> 
                 </div>
                 
                 <!-- tombol -->
                 <div class="button">
-                    <p id="b-i-ibu"> Kembali</p>
-                    <p id="n-i-ibu"> Kirim</p>
+                    <p id="b-i-ibu" onclick="iIbu(this);"> Kembali</p>
+                    <p id="n-i-ibu" onclick="iIbu(this);" type="submit" > Kirim</p>
                 </div>
+                
+                            <!-- <div id="confirm-form" class="container-confirm a-pos">
+                                <div class="contain-content">
+                                    <p>apakah anda yakin bahwa data yang telah anda isi telah benar?</p>
+                                </div>
+                                <div class="button">
+                                    <p>Batal</p>
+                                    <p>Kirim</p>
+                                </div>
+                            </div> -->
             </div>
+
         </form>
     </div>
 
 
     <!-- <input type="file" name="ktp"> -->
     <button type="submit" class="btn-daftar radius-2">Daftar</button>
-    </form>
     </div>
 
 

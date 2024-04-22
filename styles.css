@@ -204,13 +204,29 @@ section{
 }
 form{
     width: 60%;
-    height: 500vh;
+    height: auto;
     vertical-align: center;
     left: 0;
     top: 0;
     background-color: #fff;
     border-radius: 20px;
     margin-bottom: 3rem;
+}
+.a-pos{
+    position: absolute;
+}
+.container-confirm{
+    top: 25%;
+    left:25%;
+    width: 50%;
+    height: 180px;
+    background-color: rgba(160, 159, 215, 0.8);
+    display: flex;
+    flex-direction: column ;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 

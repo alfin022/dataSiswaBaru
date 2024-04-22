@@ -13,11 +13,91 @@ document.addEventListener('click', function (e) {
         navbarNav.classList.remove ('active');
     }
 });
+
+// scrolling to form
+var posForm = document.getElementById("form-daftar-langsung").getBoundingClientRect().top;
+var offSet = 30;
+// tombol kembali dan selanjutnya
+
+// bagan anak 
 function iAnak(elem){
     var bAnak = document.getElementById("i-anak");
     if(elem.id == "n-i-anak"){
         bAnak.classList.add("d-none");  
         document.getElementById("i-alamat").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+}
+// bagan alamat
+function iAlamat(elem){
+    var bAlamat = document.getElementById("i-alamat");
+    if(elem.id == "n-i-alamat"){
+        bAlamat.classList.add("d-none");  
+        document.getElementById("i-ayah").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+    else{
+        bAlamat.classList.add("d-none");  
+        document.getElementById("i-anak").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+}
+
+// bagan ayah
+function iAyah(elem){
+    var bAyah = document.getElementById("i-ayah");
+    if(elem.id == "n-i-ayah"){
+        bAyah.classList.add("d-none");  
+        document.getElementById("i-ibu").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+    else{
+        bAyah.classList.add("d-none");  
+        document.getElementById("i-alamat").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+}
+
+// bagan ibu
+function iIbu(elem){
+    var bIbu = document.getElementById("i-ibu");
+    if(elem.id == "n-i-ibu"){
+        bIbu.classList.add("d-none");  
+        document.getElementById("i-ibu").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+    else{
+        bIbu.classList.add("d-none");  
+        document.getElementById("i-ayah").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
     }
 }
 
