@@ -3,7 +3,8 @@
     padding: 0;
     --primary:#4589D8;
     --bg:rgb(243, 242, 242);
-    --blk:rgb(21, 20, 20);
+    --blk:rgb(0, 0, 0);
+
     font-family: 'poppins', sans-serif;
     box-sizing: border-box;
 }
@@ -24,7 +25,7 @@ header{
     align-items: center;
     transition: 0.6s;
     padding: 10px 70px;
-    z-index: 999;
+    z-index: 9999;
 }
 
 .sticky{
@@ -161,6 +162,17 @@ section{
 #panel-medsos{
     padding: 3rem 0;
     justify-content: center;
+    margin-bottom: 10rem;
+}
+#panel-daftar{
+    background-color: #fff;
+    color: #121212;
+}
+#panel-daftar .grid-daftar{
+    border: 2px solid #121212;
+}
+#panel-daftar a{
+    border-top: 2px solid #121212;
 }
 #contact{
     margin-top: 15vh;
@@ -177,18 +189,24 @@ section{
 }
 
 .input-form{
-    border-radius: 5px;
+    border-radius: 20px;
     width: 80%;
-    padding: 0.5rem;
+    padding: 0.3rem 1.7rem;
+    border: 0;
+    border-bottom: 2px solid #4589D8;
+    background: transparent;
+}
+.input-form:focus{
+    outline: none;
 }
 .button{
     display: flex;
     justify-content: space-between;
     margin:2rem 3rem;
 }
-.button p{
+.button p, .submit{
     border: 3px solid #121212;
-    width: 20vh;
+    width: 40vh;
     padding: 0.7rem;
     border-radius: 10px;
 }
@@ -204,6 +222,7 @@ section{
 }
 form{
     width: 60%;
+    z-index: 1001;
     height: auto;
     vertical-align: center;
     left: 0;
@@ -230,15 +249,87 @@ form{
 }
 
 
-.foot{
-    padding: 1.7rem;
+.footer{
+    position: relative;
     width: 100%;
-    height: 25vh;
-    bottom: 0;
-    background-color: var(--blk);
-    border-top: 5px solid var(--primary);
+    background-color: #4589D8;
+    min-height: 100px;
+    padding: 20px 50px;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.social-icon, .menu-footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.medsos-item, .menu-item{
+    list-style: none;
+}
+.icon-menu-link{
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+.icon-menu-link:hover{
+    transform: translateY(-10px);
+}
+.menu-link{
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+.menu-link:hover{
+    opacity: 1;
 }
 
+.wave{
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 70px;
+}
+.wave#wave1{
+    z-index:1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animate-wave1 4s linear infinite;
+}
+
+.wave#wave2{
+    z-index:999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate-wave2 4s linear infinite !important;
+}
+.wave#wave3{
+    z-index:1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animate-wave1 3s linear infinite ;
+}
+.wave#wave4{
+    z-index:999;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animate-wave2 3s linear infinite ;
+}
 
 
 @keyframes banner-change{
@@ -259,6 +350,22 @@ form{
     }
     100%{
         background-image: url('/assets/img/hero.jpg');
+    }
+}
+@keyframes animate-wave1{
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0;
+    }
+}
+@keyframes animate-wave2{
+    0%{
+        background-position-x: -1000px;
+    }
+    100%{
+        background-position-x: 0;
     }
 }
 @media only screen and (max-width : 1366px){

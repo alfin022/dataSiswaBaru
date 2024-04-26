@@ -24,9 +24,31 @@ function iAnak(elem){
     var bAnak = document.getElementById("i-anak");
     if(elem.id == "n-i-anak"){
         bAnak.classList.add("d-none");  
+        document.getElementById("i-anak2").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+}
+// bagan anak 
+function iAnak2(elem){
+    var bAnak2 = document.getElementById("i-anak2");
+    if(elem.id == "n-i-anak2"){
+        bAnak2.classList.add("d-none");  
         document.getElementById("i-alamat").classList.remove("d-none")
         var posScroll = posForm + window.scrollY - offSet;
         window.scrollTo({
+            top : posScroll,
+            behavior : "smooth"
+        });
+    }
+    else{
+        bAnak2.classList.add("d-none");
+        document.getElementById("i-anak").classList.remove("d-none")
+        var posScroll = posForm + window.scrollY - offSet;
+        window.screenTop({
             top : posScroll,
             behavior : "smooth"
         });
@@ -100,5 +122,6 @@ function iIbu(elem){
         });
     }
 }
+
 
 

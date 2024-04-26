@@ -42,60 +42,89 @@
                     IDENTITAS ANAK
                 </h1>
                 <div class="input-contain">
-                    <P>Nama Lengkap &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Nama Lengkap &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
                     <P>Jenis Kelamin &nbsp; </P>
-                    <input type="radio" name="jk" value="L" required><label for="L">Laki-Laki</label>
+                    <input type="radio" name="jk" value="L" checked="checked" required><label for="L">Laki-Laki</label>
                     <input type="radio" name="jk" value="P"><label for="P">Perempuan</label>
                 </div>
                 <div class="input-contain">
-                    <P>NIK &nbsp; </P><input type="text" class="input-form"> 
+                    <P>NIK &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>No.KK &nbsp; </P><input type="text" class="input-form"> 
+                    <P>No.KK &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
                     <P>Tempat Lahir &nbsp; </P><input type="text" class="input-form">
                 </div>
-                <div class="input-contain">
-                    <P>Tanggal Lahir &nbsp; </P><input type="text" class="input-form"> 
-                </div>
-                <div class="input-contain">
-                    <P>No. Registrasi Akta &nbsp; </P><input type="text" class="input-form"> 
-                </div>
-                <div class="input-contain">
-                    <P>Agama &nbsp; </P><input type="text" class="input-form"> 
-                </div>
-                <div class="input-contain">
-                    <P>Anak Ke &nbsp; </P><input type="text" class="input-form"> 
-                </div>
+
                 <!-- tombol -->
                 <div class="button">
-                    <p id="b-i-anak" class="hidden"> Kembali</p>
-                    <p id="n-i-anak" onclick="iAnak(this);" > Selanjutnya</p>
+                    <p id="b-i-anak" onclick="iAnak(this)"> Kembali</p>
+                    <p id="n-i-anak" onclick="iAnak(this);"> Selanjutnya &rarr;	</p>
                 </div>
             </div>
+            
+            <!-- identitas anakk #2 -->
+            
+            <div id="i-anak2" class="d-none">
+                <h1>
+                    IDENTITAS ANAK
+                </h1>
+                <div class="input-contain">
+                    <div class="input-contain">
+                        <P>Tanggal Lahir &nbsp; </P><input type="date" class="input-form">
+                    </div>
+                    <div class="input-contain">
+                        <P>No. Registrasi Akta &nbsp; </P><input type="text" class="input-form">
+                    </div>
+                    <div class="input-contain">
+                        <P>Agama &nbsp; </P>
+                        <select name="agama" id="agama" class="input-form" required>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Protestan</option>
+                            <option value="Katholic">Catholic</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Konghucu">Konghucu</option>
+                            <option value="Kepercayaan Kepada Tuhan YME">Kepercayaan Kepada Tuhan YME</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="input-contain">
+                        <P>Anak Ke &nbsp; </P><input type="text" class="input-form">
+                    </div>
+                    <!-- tombol -->
+                    <div class="button">
+                        <p id="b-i-anak2" onclick="iAnak2(this)"> Kembali</p>
+                        <p id="n-i-anak2" onclick="iAnak2(this);"> Selanjutnya</p>
+                    </div>
+
+                </div>
+            </div>
+
+
             <!-- identitas data alamat -->
             <div id="i-alamat" class="d-none">
                 <h1> Alamat Siswa </h1>
                 <div class="input-contain">
-                    <P>Alamat &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Alamat &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>RT &nbsp; </P><input type="text" class="input-form"> 
+                    <P>RT &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>RW &nbsp; </P><input type="text" class="input-form"> 
+                    <P>RW &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Dusun &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Dusun &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Desa / Kelurahan &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Desa / Kelurahan &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Kode Pos &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Kode Pos &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <!-- tombol -->
                 <div class="button">
@@ -103,23 +132,23 @@
                     <p id="n-i-alamat" onclick="iAlamat(this);"> Selanjutnya</p>
                 </div>
             </div>
-            
+
             <div id="i-ayah" class="d-none">
                 <h1>Identitas Ayah Kandung</h1>
                 <div class="input-contain">
-                    <P>Nama Lengkap  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Nama Lengkap &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>NIK  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>NIK &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Tahun lahir  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Tahun lahir &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Pendidikan Terakhir  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Pendidikan Terakhir &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Pekerjaan  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Pekerjaan &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <!-- tombol -->
                 <div class="button">
@@ -130,28 +159,29 @@
             <div id="i-ibu" class="d-none">
                 <h1>Identitas Ibu Kandung</h1>
                 <div class="input-contain">
-                    <P>Nama Lengkap  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Nama Lengkap &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>NIK  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>NIK &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Tahun lahir  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Tahun lahir &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Pendidikan Terakhir  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Pendidikan Terakhir &nbsp; </P><input type="text" class="input-form">
                 </div>
                 <div class="input-contain">
-                    <P>Pekerjaan  &nbsp; </P><input type="text" class="input-form"> 
+                    <P>Pekerjaan &nbsp; </P><input type="text" class="input-form">
                 </div>
-                
+
                 <!-- tombol -->
                 <div class="button">
                     <p id="b-i-ibu" onclick="iIbu(this);"> Kembali</p>
-                    <p id="n-i-ibu" onclick="iIbu(this);" type="submit" > Kirim</p>
+
+                    <button type="submit" class="submit">Daftar</button>
                 </div>
-                
-                            <!-- <div id="confirm-form" class="container-confirm a-pos">
+
+                <!-- <div id="confirm-form" class="container-confirm a-pos">
                                 <div class="contain-content">
                                     <p>apakah anda yakin bahwa data yang telah anda isi telah benar?</p>
                                 </div>
@@ -167,30 +197,30 @@
 
 
     <!-- <input type="file" name="ktp"> -->
-    <button type="submit" class="btn-daftar radius-2">Daftar</button>
     </div>
 
 
 
     <!-- footer -->
-    <footer class="foot">
-        <div class="content-footer">
-            <h2>sdn walahar 1</h2>
+    <footer class="footer">
+        <div class="waves">
+            <div id="wave1" class="wave"></div>
+            <div id="wave2" class="wave"></div>
+            <div id="wave3" class="wave"></div>
+            <div id="wave4" class="wave"></div>
         </div>
-        <div>
-            <li>
-                <a href="">INFORMASI</a>
+        <ul class="menu-footer" id="social-icon">
+            <li id="instagram" class="medsos-item"><a href="#" class="icon-menu-link">instagram</a></li>
 
-            </li>
-            <li>
-                <a href="">KONTAK KAMI</a>
+        </ul>
 
-            </li>
-            <li>
+        <ul class="menu-footer" id="footer-menu">
+            <li class="menu-item"><a href="#" class="menu-link">Informasi</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Kontak Kami</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Tim</a></li>
+        </ul>
 
-                <a href="">MEDIA SOSIAL</a>
-            </li>
-        </div>
+
     </footer>
     <!-- end footer -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -206,7 +236,6 @@
         feather.replace();
     </script>
     <script src="assets/js/scripts.js"></script>
-
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyaLGWInDbVc2x1Dl5h6LisSqioKxTsKP8NcO6xAzenegmrslqh10ewfZp75Dz592ru/exec'
         const form = document.forms['submit-to-google-sheet']
@@ -215,12 +244,17 @@
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
-                    // alert('daftar sukses')
+                    alert('daftar sukses')
                     console.log('Success!', response)
                 })
-                .catch(error => console.error('Error!', error.message))
-        })
+                .catch(error => {
+                    alert('Cek Kembali Ada Data Yang Belum Diisi !!!' + error.message);
+                    console.error('Error!', error.message)}
+                    )
+        });
     </script>
+
+
     <script>
         window.addEventListener("scroll", function () {
             var header = document.querySelector("header");
