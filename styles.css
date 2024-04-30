@@ -385,6 +385,13 @@ form{
         width: 85%;
         margin: 2rem 1rem;
     }
+    header{
+        position: relative;
+    }
+    .footer{
+        margin-top: 10rem;
+    }
+
 }@media only screen and (max-width : 900px){
     html{
         font-size: 65%;

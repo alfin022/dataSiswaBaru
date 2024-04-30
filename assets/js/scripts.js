@@ -20,18 +20,25 @@ var offSet = 30;
 // tombol kembali dan selanjutnya
 
 // bagan anak 
-function iAnak(elem){
+function iAnak(elem) {
     var bAnak = document.getElementById("i-anak");
-    if(elem.id == "n-i-anak"){
-        bAnak.classList.add("d-none");  
-        document.getElementById("i-anak2").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener('click', () => {
+        if (elem.id == "n-i-anak") {
+            bAnak.classList.add("d-none");
+            document.getElementById("i-anak2").classList.remove("d-none");
+            var posScroll = document.getElementById("pos-form").getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: posScroll,
+                behavior: "smooth"
+            });
+        }
+    });
 }
+
+        
+
 // bagan anak 
 function iAnak2(elem){
     var bAnak2 = document.getElementById("i-anak2");
