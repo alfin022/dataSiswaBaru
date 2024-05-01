@@ -29,6 +29,7 @@ header{
 }
 
 .sticky{
+    position: sticky;
     padding: 5px 70px;
     background: var(--bg);
     border-bottom: 3px solid var(--primary);
