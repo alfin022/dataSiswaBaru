@@ -33,7 +33,7 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-page">
         <div class="container-fluid">
             <a href="index.html" class="navbar-brand me-auto">
-                SDN<span>WALAHAR1</span>1
+                SDN<span>WALAHAR</span>1
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasNavbar"
                 aria-controls="offCanvasNavbar" aria-label="Toggle navigation">
@@ -43,7 +43,9 @@
                 aria-labelledby="offCanvasNavbarLabel">
 
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offCanvasNavbarLabel">SDN WALAHAR 1</h5>
+                    <a href="#" class="navbar-brand me-auto">
+                        SDN<span>WALAHAR</span>1
+                    </a>
                     <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
@@ -74,11 +76,11 @@
     </div>
 
     <div class="container-fluid row px-5" id="form-contain">
-        <form name="submit-to-google-sheet" id="form-daftar-langsung" >
+        <form name="submit-to-google-sheet" id="form-daftar-langsung">
             <!-- pembuka page  identitas anak-->
             <div id="page-0">
                 <div class="container-fluid br"></div>
-                
+
                 <div id="errorMessage" class="error-message" style="display: none;">Please fill in all fields.</div>
 
 
@@ -87,20 +89,20 @@
                     <div class="col-auto">
                         <label class="sr-only" for="inlineFormInput">Name Lengkap</label>
                         <input type="text" class="form-control mb-2" name="nama"
-                            oninput="this.value = this.value.toUpperCase()" >
+                            oninput="this.value = this.value.toUpperCase()">
                     </div>
                 </div>
 
                 <div class="form-row align-items-center row">
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Jenis kelamin</label>
-                        <select class="form-control mb-2" name="jk" id="jk" >
+                        <select class="form-control mb-2" name="jk" id="jk">
                             <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>
                         <div class="col-lg">
                             <label class="sr-only" for="inlineFormInput">Penerima PIP/PKH</label>
-                            <select class="form-control mb-2" name="pip-pkh" id="pip-pkh" >
+                            <select class="form-control mb-2" name="pip-pkh" id="pip-pkh">
                                 <option value="Menerima">Ya</option>
                                 <option value="Tidak-Menerima">Tidak</option>
                             </select>
@@ -110,21 +112,21 @@
                     <div class="form-row align-items-center">
                         <div class="col-auto">
                             <label class="sr-only" for="inlineFormInput">NIK</label>
-                            <input type="number" class="form-control mb-2" name="nik" min="0" >
+                            <input type="number" class="form-control mb-2" name="nik" min="0">
                         </div>
                     </div>
 
                     <div class="form-row align-items-center">
                         <div class="col-auto">
                             <label class="sr-only" for="inlineFormInput">No.KK</label>
-                            <input type="number" class="form-control mb-2" name="no-kk" min="0" >
+                            <input type="number" class="form-control mb-2" name="no-kk" min="0">
                         </div>
                     </div>
 
                     <div class="form-row align-items-center">
                         <div class="col-auto">
                             <label class="sr-only" for="inlineFormInput">No.Akta</label>
-                            <input type="number" class="form-control mb-2" name="no-akta" min="0" >
+                            <input type="number" class="form-control mb-2" name="no-akta" min="0">
                         </div>
                     </div>
 
@@ -134,43 +136,49 @@
             </div>
             <!-- penutup page  -->
             <!-- pembuka page   identitas anak 2-->
-            <div id="page-1"  class="d-none">
+            <div id="page-1" class="d-none">
                 <div class="container-fluid br"></div>
                 <h2>Identitas anak</h2>
                 <div class="form-row align-items-center row">
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Kota Lahir</label>
                         <input type="text" class="form-control mb-2" name="kota-lahir"
-                            oninput="this.value = this.value.toUpperCase()" >
+                            oninput="this.value = this.value.toUpperCase()">
                     </div>
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Tanggal Lahir</label>
-                        <input type="date" class="form-control mb-2" name="tgl-lahir" >
+                        <input type="date" class="form-control mb-2" name="tgl-lahir">
                     </div>
                 </div>
 
                 <div class="form-row align-items-center">
                     <div class="col-auto">
                         <label class="sr-only" for="inlineFormInput">Berkebutuhan Khusus</label>
-                        <select class="form-control mb-2" name="betkebutuhan-khusus" id="betkebutuhan-khusus" >
-                            <option value="Budha">tuna netra</option>
-                            <option value="Katholic">Catholic</option>
-                            <option value="Hindu">Hindu</option>
-                            <option value="Kepercayaan Kepada Tuhan YME">Kepercayaan Kepada Tuhan YME</option>
-                            <option value="Konghucu">Konghucu</option>
-                            <option value="Kristen">Protestan</option>
-                            <option value="Islam">Islam</option>
-                            <option value="Lainnya">Lainnya</option>
-
+                        <select class="form-control mb-2" name="betkebutuhan-khusus" id="betkebutuhan-khusus">
+                            <option value="-">-</option>
+                            <option value="Autis">Autis</option>
+                            <option value="Cerda Istimewa">Cerda Istimewa</option>
+                            <option value="Daksa Ringan">Daksa Ringan</option>
+                            <option value="Daksa Sedang">Daksa Sedang</option>
+                            <option value="Down Syndrome">Down Syndrome</option>
+                            <option value="Grahita Ringan">Grahita Ringan</option>
+                            <option value="Grahita Sedang">Grahita Sedang</option>
+                            <option value="Hyperaktif">Hyperaktif</option>
+                            <option value="Indigo">Indigo</option>
+                            <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                            <option value="Laras">Laras</option>
+                            <option value="Narkoba">Narkoba</option>
+                            <option value="Netra ">Netra </option>
+                            <option value="Rungu">Rungu</option>
+                            <option value="Wicara">Wicara</option>
                         </select>
-
                     </div>
                 </div>
 
                 <div class="form-row align-items-center">
                     <div class="col-auto">
                         <label class="sr-only" for="inlineFormInput">Agama</label>
-                        <select class="form-control mb-2" name="agama" id="agama" >
+                        <select class="form-control mb-2" name="agama" id="agama">
                             <option value="Budha">Budha</option>
                             <option value="Katholic">Catholic</option>
                             <option value="Hindu">Hindu</option>
@@ -275,7 +283,7 @@
                     </div>
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Pendidikan Terakhir</label>
-                        <select class="form-control mb-2" name="pendidikan-ayah" id="pendidikan-ayah" >
+                        <select class="form-control mb-2" name="pendidikan-ayah" id="pendidikan-ayah">
                             <option value="D1">D1</option>
                             <option value="D2">D2</option>
                             <option value="D3">D3</option>
@@ -309,7 +317,7 @@
                 <div class="form-row align-items-center">
                     <div class="col-auto">
                         <label class="sr-only" for="inlineFormInput">Pekerjaan</label>
-                        <select class="form-control mb-2" name="pekerjaan-ayah" id="pekerjaan-ayah" >
+                        <select class="form-control mb-2" name="pekerjaan-ayah" id="pekerjaan-ayah">
                             <option value="Buruh">Buruh</option>
                             <option value="Karyawan-BUMN">Karyawan BUMN</option>
                             <option value="Karyawan-Swasta">Karyawan Swasta</option>
@@ -333,7 +341,7 @@
                 <div class="form-row align-items-center">
                     <div class="col-auto">
                         <label class="sr-only" for="inlineFormInput">Gaji</label>
-                        <select class="form-control mb-2" name="gaji-ayah" id="gaji-ayah" >
+                        <select class="form-control mb-2" name="gaji-ayah" id="gaji-ayah">
                             <option value="Kurang-dari-Rp.500.000">Kurang dari Rp.500.000,-</option>
                             <option value="Rp.500.000-Rp.999.999">Rp.500.000 - Rp.999.999,-</option>
                             <option value="Rp.1.000.000-Rp.1.999.999">Rp.1.000.000 - Rp.1.999.999,-</option>
@@ -374,7 +382,7 @@
                     </div>
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Pendidikan Terakhir</label>
-                        <select class="form-control mb-2" name="pendidikan-ibu" id="pendidikan-ibu" >
+                        <select class="form-control mb-2" name="pendidikan-ibu" id="pendidikan-ibu">
                             <option value="D1">D1</option>
                             <option value="D2">D2</option>
                             <option value="D3">D3</option>
@@ -405,10 +413,10 @@
                     </div>
                 </div>
 
-                <div class="form-row align-items-center">
-                    <div class="col-auto">
+                <div class="form-row align-items-center row">
+                    <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Pekerjaan</label>
-                        <select class="form-control mb-2" name="pekerjaan-ibu" id="pekerjaan-ibu" >
+                        <select class="form-control mb-2" name="pekerjaan-ibu" id="pekerjaan-ibu">
                             <option value="Buruh">Buruh</option>
                             <option value="Karyawan BUMN">Karyawan BUMN</option>
                             <option value="Karyawan Swasta">Karyawan Swasta</option>
@@ -428,13 +436,10 @@
                             <option value="Wirausaha">Wirausaha</option>
                         </select>
 
-
                     </div>
-                </div>
-                <div class="form-row align-items-center">
-                    <div class="col-auto">
+                    <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Gaji</label>
-                        <select class="form-control mb-2" name="gaji-ibu" id="gaji-ibu" >
+                        <select class="form-control mb-2" name="gaji-ibu" id="gaji-ibu">
                             <option value="Kurang-dari-Rp.500.000">Kurang dari Rp.500.000,-</option>
                             <option value="Rp.500.000-Rp.999.999">Rp.500.000 - Rp.999.999,-</option>
                             <option value="Rp.1.000.000-Rp.1.999.999">Rp.1.000.000 - Rp.1.999.999,-</option>
@@ -443,6 +448,29 @@
                             <option value="Tidak-Berpenghasilan">Tidak Berpenghasilan</option>
                         </select>
                     </div>
+                </div>
+
+
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput">Berkebutuhan Khusus</label>
+                    <select class="form-control mb-2" name="betkebutuhan-khusus-ibu" id="betkebutuhan-khusus-ibu">
+                        <option value="-">-</option>
+                        <option value="Autis">Autis</option>
+                        <option value="Cerda Istimewa">Cerda Istimewa</option>
+                        <option value="Daksa Ringan">Daksa Ringan</option>
+                        <option value="Daksa Sedang">Daksa Sedang</option>
+                        <option value="Down Syndrome">Down Syndrome</option>
+                        <option value="Grahita Ringan">Grahita Ringan</option>
+                        <option value="Grahita Sedang">Grahita Sedang</option>
+                        <option value="Hyperaktif">Hyperaktif</option>
+                        <option value="Indigo">Indigo</option>
+                        <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                        <option value="Laras">Laras</option>
+                        <option value="Narkoba">Narkoba</option>
+                        <option value="Netra ">Netra </option>
+                        <option value="Rungu">Rungu</option>
+                        <option value="Wicara">Wicara</option>
+                    </select>
                 </div>
             </div>
             <!-- penutup page  -->
@@ -459,7 +487,7 @@
                 <div class="form-row align-items-center">
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Jenis Sekolah</label>
-                        <select class="form-control mb-2" name="j-sekolah" id="j-sekolah" >
+                        <select class="form-control mb-2" name="j-sekolah" id="j-sekolah">
                             <option value="-">-</option>
                             <option value="TK">TK</option>
                             <option value="RA">RA</option>
@@ -518,7 +546,7 @@
 
                 <div class="col-auto">
                     <div class="form-check mb-2">
-                        <input class="form-check-input" type="checkbox" id="autoSizingCheck" >
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck">
                         <label class="form-check-label" for="autoSizingCheck">
                             Saya mengisi data dengan benar
                         </label>
@@ -526,13 +554,14 @@
                 </div>
 
                 <div class="container-fluid row">
-                    <p id="prev-btn" class="btn btn-outline-primary col-lg m-2 d-none" onclick="pageBtn(this);">Kembali</p>
+                    <p id="prev-btn" class="btn btn-outline-primary col-lg m-2 d-none" onclick="pageBtn(this);">Kembali
+                    </p>
                     <p id="next-btn" class="btn btn-outline-primary col-lg m-2" onclick="pageBtn(this);">selanjutnya</p>
 
 
                 </div>
                 <container-fluid class="row">
-                    <button type="submit" class="btn btn-primary col-lg m-2 ">Submit</button>
+                    <button type="submit" class="btn btn-success col-lg m-2 " id="btn-submit">Submit</button>
 
                 </container-fluid>
             </div>
@@ -593,40 +622,40 @@
         crossorigin="anonymous"></script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyaLGWInDbVc2x1Dl5h6LisSqioKxTsKP8NcO6xAzenegmrslqh10ewfZp75Dz592ru/exec';
-const form = document.forms['submit-to-google-sheet'];
+        const form = document.forms['submit-to-google-sheet'];
 
-form.addEventListener('submit', e => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    let isEmptyField = false;
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            let isEmptyField = false;
 
-    // Memeriksa setiap field
-    formData.forEach((value, key) => {
-        if (!value.trim()) {
-            isEmptyField = true;
-            return;
-        }
-    });
-
-    if (isEmptyField) {
-        alert('Masih ada kolom yang kosong!');
-    } else {
-        fetch(scriptURL, { method: 'POST', body: formData })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = 'index.html';
-                    alert('Daftar sukses');
-                    console.log('Success!', response);
-                } else {
-                    alert('Gagal mengirim data ke server.');
-                    console.error('Error!', response.statusText);
+            // Memeriksa setiap field
+            formData.forEach((value, key) => {
+                if (!value.trim()) {
+                    isEmptyField = true;
+                    return;
                 }
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
             });
-    }
-});
+
+            if (isEmptyField) {
+                alert('Masih ada kolom yang kosong!');
+            } else {
+                fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.href = 'index.html';
+                            alert('Daftar sukses');
+                            console.log('Success!', response);
+                        } else {
+                            alert('Gagal mengirim data ke server.');
+                            console.error('Error!', response.statusText);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                    });
+            }
+        });
 
     </script>
 </body>

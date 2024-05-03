@@ -1,134 +1,84 @@
-// toogle
-const navbarNav = document.querySelector('.navbar-nav');
-// ketika hamburger menu di klik
-document.querySelector('#hamburger-menu').onclick = () => {
-    navbarNav.classList.toggle('active')
-};
+var currentPage = 0;
 
-// klik diluar sidebar untuk menghilangkan nav
-const ham = document.querySelector('#hamburger-menu');
+var submitBtn = document.getElementById("btn-submit");
 
-document.addEventListener('click', function (e) {
-    if (!ham.contains(e.target) && !navbarNav.contains(e.target)) {
-        navbarNav.classList.remove ('active');
-    }
-});
+function pageBtn(elem) {
+    var previousPage = document.getElementById("page-" + currentPage);
+    var prevBtn = document.getElementById("prev-btn");
+    var nextBtn = document.getElementById("next-btn");
+    submitBtn.classList.add("d-none");
 
-// scrolling to form
-var posForm = document.getElementById("form-daftar-langsung").getBoundingClientRect().top;
-var offSet = 30;
-// tombol kembali dan selanjutnya
 
-// bagan anak 
-function iAnak(elem) {
-    var bAnak = document.getElementById("i-anak");
-    const btn = document.getElementById("btn");
+    
 
-    btn.addEventListener('click', () => {
-        if (elem.id == "n-i-anak") {
-            bAnak.classList.add("d-none");
-            document.getElementById("i-anak2").classList.remove("d-none");
-            var posScroll = document.getElementById("pos-form").getBoundingClientRect().top + window.scrollY;
+    
+    if (elem.id == "next-btn") {
+        currentPage++;
+        if (currentPage == 0) {
+            prevBtn.classList.add("d-none");
+            submitBtn.classList.add("d-none");
+        }
+        if (currentPage == 5) {
+            nextBtn.classList.add("d-none");
+            submitBtn.classList.remove("d-none");
+            
+        }
+        else {
+            prevBtn.classList.remove("d-none")
+            nextBtn.classList.remove("d-none")
+            submitBtn.classList.add("d-none");
+        }
+        var posScroll = document.getElementById("form-contain").getBoundingClientRect().top + window.scrollY;
             window.scrollTo({
                 top: posScroll,
                 behavior: "smooth"
             });
+    } else if (elem.id == "prev-btn") {
+        currentPage--;
+        if (currentPage == 0) {
+            prevBtn.classList.add("d-none");
+            submitBtn.classList.add("d-none");
+
         }
-    });
-}
+        else {
+            submitBtn.classList.add("d-none");
+
+            prevBtn.classList.remove("d-none")
+            nextBtn.classList.remove("d-none")
+        }
+        var posScroll = document.getElementById("form-contain").getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: posScroll,
+                behavior: "smooth"
+            });
+    }
+
+
+
+    var nextPage = document.getElementById("page-" + currentPage);
+
+    if (previousPage) {
+        previousPage.classList.add("d-none");
 
         
+    }
 
-// bagan anak 
-function iAnak2(elem){
-    var bAnak2 = document.getElementById("i-anak2");
-    if(elem.id == "n-i-anak2"){
-        bAnak2.classList.add("d-none");  
-        document.getElementById("i-alamat").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
+    if (nextPage) {
+        nextPage.classList.remove("d-none");
     }
-    else{
-        bAnak2.classList.add("d-none");
-        document.getElementById("i-anak").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.screenTop({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
-}
-// bagan alamat
-function iAlamat(elem){
-    var bAlamat = document.getElementById("i-alamat");
-    if(elem.id == "n-i-alamat"){
-        bAlamat.classList.add("d-none");  
-        document.getElementById("i-ayah").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
-    else{
-        bAlamat.classList.add("d-none");  
-        document.getElementById("i-anak").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
-}
 
-// bagan ayah
-function iAyah(elem){
-    var bAyah = document.getElementById("i-ayah");
-    if(elem.id == "n-i-ayah"){
-        bAyah.classList.add("d-none");  
-        document.getElementById("i-ibu").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
-    else{
-        bAyah.classList.add("d-none");  
-        document.getElementById("i-alamat").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
-}
-
-// bagan ibu
-function iIbu(elem){
-    var bIbu = document.getElementById("i-ibu");
-    if(elem.id == "n-i-ibu"){
-        bIbu.classList.add("d-none");  
-        document.getElementById("i-ibu").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
-    else{
-        bIbu.classList.add("d-none");  
-        document.getElementById("i-ayah").classList.remove("d-none")
-        var posScroll = posForm + window.scrollY - offSet;
-        window.scrollTo({
-            top : posScroll,
-            behavior : "smooth"
-        });
-    }
+    console.log(currentPage);
 }
 
 
+function checkFields() {
+    var name = document.getElementById("nama").value;
+    var nik = document.getElementById("nik").value;
 
+    if (name.trim() === "" || nik.trim() === "") {
+        document.getElementById("errorMessage").style.display = "block";
+    } else {
+        // Submit form or navigate to next page
+        document.getElementById("form-daftar-langsung").submit();
+    }
+}
