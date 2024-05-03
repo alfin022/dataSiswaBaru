@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SDN Walahar 1</title>
+    <link rel="icon" href="assets/img/logo-nav.png" type="image/x-icon"/>
 
+
+    <!-- css -->
+    <!-- css-bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,55 +24,110 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- my style -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!-- my styles -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- neo my styles -->
+    <link rel="stylesheet" href="../bootstrap/assets/css/styles.css">
 </head>
 
 <body>
-    <header>
+    <!-- navbar  -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-page">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand me-auto">
+                SDN<span>WALAHAR</span>1
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offCanvasNavbar"
+                aria-controls="offCanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offCanvasNavbar"
+                aria-labelledby="offCanvasNavbarLabel">
 
-        <a href="index.html" class="logo">SDNWalahar1</a>
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offCanvasNavbarLabel">SDN WALAHAR 1</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
 
-        <ul class="navbar-nav">
-            <li><a href="index.html">Daftar</a></li>
-            <li><a href="#">Cara Daftar</a></li>
-            <li><a href="#">Kontak</a></li>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2 active" aria-current="page"
+                                aria-disabled="true">Home</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2" aria-current="page">Kontak Kami</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2" aria-current="page">Cara Daftar</a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2" aria-current="page">Tentang Kami</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- penutup nav  -->
+
+
+
+
+
+
+
+
+    <div class="container-fluid br" style="height: 100vh; width: 100%;"></div>
+    <!-- daftar section  -->
+
+    <div class="container-fluid br"></div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="waves">
+            <div id="wave1" class="wave"></div>
+            <div id="wave2" class="wave"></div>
+            <div id="wave3" class="wave"></div>
+            <div id="wave4" class="wave"></div>
+        </div>
+        <ul class="menu-footer" id="social-icon">
+            <li id="instagram" class="medsos-item"><a href="#" class="icon-menu-link">instagram</a></li>
+
         </ul>
-    </header>
 
-    <!-- hero -->
-    <div class="container pad-top">
-        <section class="panel-content">
-            <main id="contact">
-                <h1>
-                    kepala Sekolah sdn walahar 1
-                </h1>
-            </main>
-        </section>
-    </div>
-
-    <footer class="foot">
+        <ul class="menu-footer" id="footer-menu">
+            <li class="menu-item"><a href="#" class="menu-link">Informasi</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Kontak Kami</a></li>
+            <li class="menu-item"><a href="#" class="menu-link">Tim</a></li>
+        </ul>
 
 
     </footer>
+    <!-- end footer -->
 
 
 
-</body>
 
-<!-- script -->
-<!-- font-script -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-<!-- sticky -->
-<script>
-    window.addEventListener("scroll", function(){
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY)>0;
-    })
-</script>
+    <!-- my script -->
+    <script src="assets/js/scripts.js"></script>
+
+    <!-- sticky -->
+    <script>
+        window.addEventListener("scroll", function () {
+            var nav = document.querySelector("nav");
+            nav.classList.toggle("navbar-page", window.scrollY > 0);
+
+        })
+    </script>
+</body>
 
 </html>
