@@ -21,6 +21,7 @@ html{
 .navbar-page{
     margin: 0;
     border-radius: 0;
+    border-bottom: 3px solid var(--primary);
 }
 .navbar-toggler{
     border: none;
@@ -81,6 +82,21 @@ html{
     .nav-link{
         padding: 0.3rem 0.5rem;
         font-size: 1.3rem;
+    }
+}
+@media(max-width: 770px){
+    html{
+        font-size: 65%;
+    }
+    .card{
+        margin-top: 10rem;
+        top: 50%;
+        right: 0;
+    }
+}
+@media(max-width: 320px){
+    html{
+        font-size: 55%;
     }
 }
 .br{

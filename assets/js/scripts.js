@@ -1,6 +1,9 @@
 var currentPage = 0;
 
 var submitBtn = document.getElementById("btn-submit");
+if (currentPage==0) {
+    submitBtn.classList.add("d-none")
+}
 
 function pageBtn(elem) {
     var previousPage = document.getElementById("page-" + currentPage);

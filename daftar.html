@@ -43,7 +43,7 @@
                 aria-labelledby="offCanvasNavbarLabel">
 
                 <div class="offcanvas-header">
-                    <a href="#" class="navbar-brand me-auto">
+                    <a href="index.html" class="navbar-brand me-auto">
                         SDN<span>WALAHAR</span>1
                     </a>
                     <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -52,14 +52,14 @@
 
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2 active" aria-current="page"
+                        <li class="nav-item"><a href="index.html" class="nav-link mx-lg-2 active" aria-current="page"
                                 aria-disabled="true">Home</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2" aria-current="page">Kontak Kami</a>
+                        <li class="nav-item"><a href="contact.html" class="nav-link mx-lg-2" aria-current="page">Kontak
+                                Kami</a>
                         </li>
-                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2" aria-current="page">Cara Daftar</a>
-                        </li>
-                        <li class="nav-item"><a href="#" class="nav-link mx-lg-2" aria-current="page">Tentang Kami</a>
+                        <li class="nav-item"><a href="about-us.html" class="nav-link mx-lg-2"
+                                aria-current="page">Tentang Kami</a>
                         </li>
                     </ul>
                 </div>
@@ -67,6 +67,7 @@
         </div>
     </nav>
     <!-- penutup nav  -->
+    <div class="containter-fluid br"></div>
 
 
     <div class="container d-flex align-items-center fs-1 justify-content-center mt-5">
@@ -154,7 +155,7 @@
                 <div class="form-row align-items-center">
                     <div class="col-auto">
                         <label class="sr-only" for="inlineFormInput">Berkebutuhan Khusus</label>
-                        <select class="form-control mb-2" name="betkebutuhan-khusus" id="betkebutuhan-khusus">
+                        <select class="form-control mb-2" name="berkebutuhan-khusus" id="berkebutuhan-khusus">
                             <option value="-">-</option>
                             <option value="Autis">Autis</option>
                             <option value="Cerda Istimewa">Cerda Istimewa</option>
@@ -235,14 +236,16 @@
                 <div class="form-row align-items-center row">
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Dusun</label>
-                        <input type="number" class="form-control mb-2" name="dusun">
+                        <input type="text" class="form-control mb-2" name="dusun"
+                            oninput="this.value = this.value.toUpperCase()">
                     </div>
                 </div>
 
                 <div class="form-row align-items-center row">
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Desa / Kelurahan</label>
-                        <input type="number" class="form-control mb-2" name="desa">
+                        <input type="text" class="form-control mb-2" name="desa"
+                            oninput="this.value = this.value.toUpperCase()">
                     </div>
                 </div>
 
@@ -314,8 +317,8 @@
                     </div>
                 </div>
 
-                <div class="form-row align-items-center">
-                    <div class="col-auto">
+                <div class="form-row align-items-center row">
+                    <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Pekerjaan</label>
                         <select class="form-control mb-2" name="pekerjaan-ayah" id="pekerjaan-ayah">
                             <option value="Buruh">Buruh</option>
@@ -337,9 +340,7 @@
                             <option value="Wirausaha">Wirausaha</option>
                         </select>
                     </div>
-                </div>
-                <div class="form-row align-items-center">
-                    <div class="col-auto">
+                    <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Gaji</label>
                         <select class="form-control mb-2" name="gaji-ayah" id="gaji-ayah">
                             <option value="Kurang-dari-Rp.500.000">Kurang dari Rp.500.000,-</option>
@@ -351,6 +352,31 @@
                         </select>
                     </div>
                 </div>
+
+                <div class="col-lg">
+                    <label class="sr-only" for="inlineFormInput">Berkebutuhan Khusus</label>
+
+                    <select class="form-control mb-2" name="berkebutuhan-khusus-ayah" id="berkebutuhan-khusus-ayah">
+                        <option value="-">-</option>
+                        <option value="Autis">Autis</option>
+                        <option value="Cerda Istimewa">Cerda Istimewa</option>
+                        <option value="Daksa Ringan">Daksa Ringan</option>
+                        <option value="Daksa Sedang">Daksa Sedang</option>
+                        <option value="Down Syndrome">Down Syndrome</option>
+                        <option value="Grahita Ringan">Grahita Ringan</option>
+                        <option value="Grahita Sedang">Grahita Sedang</option>
+                        <option value="Hyperaktif">Hyperaktif</option>
+                        <option value="Indigo">Indigo</option>
+                        <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                        <option value="Laras">Laras</option>
+                        <option value="Narkoba">Narkoba</option>
+                        <option value="Netra ">Netra </option>
+                        <option value="Rungu">Rungu</option>
+                        <option value="Wicara">Wicara</option>
+                    </select>
+
+                </div>
+
             </div>
             <!-- penutup page  -->
 
@@ -449,29 +475,33 @@
                         </select>
                     </div>
                 </div>
+                <div class="form-row align-items-center row">
+                    <div class="col-lg">
+                        <label class="sr-only" for="inlineFormInput">Berkebutuhan Khusus</label>
 
+                        <select class="form-control mb-2" name="betkebutuhan-khusus-ibu" id="betkebutuhan-khusus-ibu">
+                            <option value="-">-</option>
+                            <option value="Autis">Autis</option>
+                            <option value="Cerda Istimewa">Cerda Istimewa</option>
+                            <option value="Daksa Ringan">Daksa Ringan</option>
+                            <option value="Daksa Sedang">Daksa Sedang</option>
+                            <option value="Down Syndrome">Down Syndrome</option>
+                            <option value="Grahita Ringan">Grahita Ringan</option>
+                            <option value="Grahita Sedang">Grahita Sedang</option>
+                            <option value="Hyperaktif">Hyperaktif</option>
+                            <option value="Indigo">Indigo</option>
+                            <option value="Kesulitan Belajar">Kesulitan Belajar</option>
+                            <option value="Laras">Laras</option>
+                            <option value="Narkoba">Narkoba</option>
+                            <option value="Netra ">Netra </option>
+                            <option value="Rungu">Rungu</option>
+                            <option value="Wicara">Wicara</option>
+                        </select>
 
-                <div class="col-auto">
-                    <label class="sr-only" for="inlineFormInput">Berkebutuhan Khusus</label>
-                    <select class="form-control mb-2" name="betkebutuhan-khusus-ibu" id="betkebutuhan-khusus-ibu">
-                        <option value="-">-</option>
-                        <option value="Autis">Autis</option>
-                        <option value="Cerda Istimewa">Cerda Istimewa</option>
-                        <option value="Daksa Ringan">Daksa Ringan</option>
-                        <option value="Daksa Sedang">Daksa Sedang</option>
-                        <option value="Down Syndrome">Down Syndrome</option>
-                        <option value="Grahita Ringan">Grahita Ringan</option>
-                        <option value="Grahita Sedang">Grahita Sedang</option>
-                        <option value="Hyperaktif">Hyperaktif</option>
-                        <option value="Indigo">Indigo</option>
-                        <option value="Kesulitan Belajar">Kesulitan Belajar</option>
-                        <option value="Laras">Laras</option>
-                        <option value="Narkoba">Narkoba</option>
-                        <option value="Netra ">Netra </option>
-                        <option value="Rungu">Rungu</option>
-                        <option value="Wicara">Wicara</option>
-                    </select>
+                    </div>
                 </div>
+
+
             </div>
             <!-- penutup page  -->
 
@@ -498,7 +528,7 @@
                     </div>
                     <div class="col-lg">
                         <label class="sr-only" for="inlineFormInput">Nama Sekolah/Lulusan</label>
-                        <input type="text" class="form-control mb-2" name="nama-sekolah-tk"
+                        <input type="text" class="form-control mb-2" name="nama-sekolah"
                             oninput="this.value = this.value.toUpperCase()">
                     </div>
                 </div>
@@ -613,15 +643,16 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
-        crossorigin="anonymous"></script>
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyaLGWInDbVc2x1Dl5h6LisSqioKxTsKP8NcO6xAzenegmrslqh10ewfZp75Dz592ru/exec';
+        const scriptURL =
+            'https://script.google.com/macros/s/AKfycbyaLGWInDbVc2x1Dl5h6LisSqioKxTsKP8NcO6xAzenegmrslqh10ewfZp75Dz592ru/exec';
         const form = document.forms['submit-to-google-sheet'];
 
         form.addEventListener('submit', e => {
@@ -640,7 +671,10 @@
             if (isEmptyField) {
                 alert('Masih ada kolom yang kosong!');
             } else {
-                fetch(scriptURL, { method: 'POST', body: formData })
+                fetch(scriptURL, {
+                        method: 'POST',
+                        body: formData
+                    })
                     .then(response => {
                         if (response.ok) {
                             window.location.href = 'index.html';
@@ -656,7 +690,6 @@
                     });
             }
         });
-
     </script>
 </body>
 
